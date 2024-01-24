@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-// import RAPID_API_KEY from "@env"
 
 const rapidApiKey = "a23672d164msh30908f7b8ceddebp1a23b8jsn6eff7681cc4b";
 
