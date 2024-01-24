@@ -20,8 +20,6 @@ const PopularJobs = () => {
     num_pages: 1,
   });
 
-  console.log(data.data);
-
   return (
     <View style={styles.container}>
       <View style={styles.header}>
