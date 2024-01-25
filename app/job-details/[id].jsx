@@ -21,6 +21,8 @@ import {
   ScreenHeaderBtn,
 } from "../../components";
 
+const tabs = ["About", "Qualifications", "Responsibilities"];
+
 const JobDetails = () => {
   const params = useLocalSearchParams();
   const router = useRouter();
@@ -30,6 +32,7 @@ const JobDetails = () => {
   });
 
   const [refreshing, setRefreshing] = useState(true);
+  const [activeTab, setActiveTab] = useState(tabs[0]);
 
   const onRefresh = () => {};
 
@@ -77,7 +80,11 @@ const JobDetails = () => {
                 companyName={data[0].employer_name}
                 location={data[0].job_country}
               />
-              <JobTabs />
+              <JobTabs
+                tabs={tabs}
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
             </View>
           )}
         </ScrollView>
